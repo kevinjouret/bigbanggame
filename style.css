@@ -1,0 +1,139 @@
+/*-------------------FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@font-face {
+    font-family: 'Digital';
+    src: url('fonts/Digital.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pixel';
+    src: url('fonts/LLPIXEL3.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*-------------------BODY*/
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: radial-gradient(circle at 50% 50%, #3c4757,#12121d);
+  min-height: 100vh;
+}
+
+/*-------------------CONTENU*/
+.container {
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%); 
+}
+
+/*-------------------LOGO*/
+.logo {
+    display: flex;
+    justify-content: space-around;
+}
+
+/*-------------------RÈGLES*/
+.rules {
+    margin-top: 0px;
+    text-align: center;
+    font-family: 'Pixel', sans-serif;
+    font-size: 1.4em;
+    color: #FCC21F;
+}
+
+/*-------------------SCORE PLAYER-CPU*/
+.scores {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Digital', sans-serif;
+    font-size: 1.7em;
+    color: white;
+}
+
+.Pscore {
+    color: greenyellow;
+}
+
+.Cscore {
+    color: rgb(255, 47, 47);
+}
+
+/*-------------------IMAGES JEU*/
+.images {
+    display: flex;
+    justify-content: space-around;
+}
+
+img {
+    width: 40%;
+    margin: 10px;
+}
+
+/*-------------------REGLAGE BOUTONS*/
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+button {
+    width: 50%;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 5px;
+    text-transform: uppercase;
+    font-size: 0.65em;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+
+/*-------------------STYLE BOUTONS*/
+.rock {
+    border: 5px solid rgb(0, 0, 255);
+    color: rgb(0, 0, 255);
+    background-color: rgba(0, 0, 185, 0.2);
+}
+
+.paper {
+    border: 5px solid yellow;
+    color: yellow;
+    background-color: rgba(255, 255, 0, 0.200);
+}
+
+.scissors {
+    border: 5px solid red;
+    color: red;
+    background-color: rgba(255, 0, 0, 0.200); 
+}
+
+.lizard {
+    border: 5px solid rgb(0, 255, 0);
+    color: rgb(0, 255, 0);
+    background-color: rgba(0, 255, 0, 0.200);
+}
+
+.spock {
+    border: 5px solid rgb(175, 2, 175);
+    color: rgb(197, 0, 197);
+    background-color: rgba(175, 2, 175, 0.200)
+}
+
+/*-------------------FOOTER*/
+h3 {
+font-family: 'Roboto', sans-serif;
+font-size: 0.65em;
+text-align: center;
+padding-top: 60px;
+}
+
+a {
+text-decoration: none;
+color: rgba(255, 255, 255, 0.250);
+}

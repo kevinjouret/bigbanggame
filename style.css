@@ -74,6 +74,10 @@ img {
     margin: 10px;
 }
 
+.Cimg {
+    transform: scaleX(-1);
+}
+
 /*-------------------REGLAGE BOUTONS*/
 .buttons {
     display: flex;
@@ -137,3 +141,4 @@ a {
 text-decoration: none;
 color: rgba(255, 255, 255, 0.250);
 }
+

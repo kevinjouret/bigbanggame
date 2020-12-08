@@ -1,18 +1,18 @@
-const rock = document.querySelector('.rock')
-const paper = document.querySelector('.paper')
-const scissors = document.querySelector('.scissors')
-const lizard = document.querySelector('.lizard')
-const spock = document.querySelector('.spock')
+const rock = document.querySelector('.rock');
+const paper = document.querySelector('.paper');
+const scissors = document.querySelector('.scissors');
+const lizard = document.querySelector('.lizard');
+const spock = document.querySelector('.spock');
 
-const Pimg = document.querySelector('.Pimg')
-const Cimg = document.querySelector('.Cimg')
+const Pimg = document.querySelector('.Pimg');
+const Cimg = document.querySelector('.Cimg');
 
-const PscoreSpan = document.querySelector('.Pscore')
-const CscoreSpan = document.querySelector('.Cscore')
-let pScore = 0
-let cScore = 0
+const PscoreSpan = document.querySelector('.Pscore');
+const CscoreSpan = document.querySelector('.Cscore');
+let pScore = 0;
+let cScore = 0;
 
-const images_opt = ['rock','paper','scissors','lizard','spock']
+const images_opt = ['rock','paper','scissors','lizard','spock'];
 
 const Pchoice = (i) =>{
     Pimg.src = 'images/'+images_opt[i]+'.png'
@@ -52,10 +52,10 @@ spock.addEventListener('click', () =>{
 const compare = () =>{
     if(Pimg.value == 'rock'){
         if((Cimg.value == 'paper') || (Cimg.value == 'spock')){
-            cScore += 1
+            cScore++;
         }
         else if((Cimg.value == 'scissors') || (Cimg.value == 'lizard')){
-            pScore += 1
+            pScore++;
         }
         else if(Cimg.value == 'rock'){
 
@@ -63,10 +63,10 @@ const compare = () =>{
     }
     else if(Pimg.value == 'paper'){
         if((Cimg.value == 'scissors') || (Cimg.value == 'lizard')){
-            cScore += 1
+            cScore++;
         }
         else if((Cimg.value == 'rock') || (Cimg.value ==  'spock')){
-            pScore += 1
+            pScore++;1
         }
         else if(Cimg.value == 'paper'){
 
@@ -74,10 +74,10 @@ const compare = () =>{
     }
     else if(Pimg.value == 'scissors'){
         if((Cimg.value == 'rock') || (Cimg.value == 'spock')){
-            cScore += 1
+            cScore++;
         }
         else if((Cimg.value == 'paper') || (Cimg.value == 'lizard')){
-            pScore += 1
+            pScore++;
         }
         else if(Cimg.value == 'scissors'){
 
@@ -85,10 +85,10 @@ const compare = () =>{
     }
     else if(Pimg.value == 'lizard'){
         if((Cimg.value == 'rock') || (Cimg.value == 'scissors')){
-            cScore += 1
+            cScore++;
         }
         else if((Cimg.value == 'paper') || (Cimg.value == 'spock')){
-            pScore += 1
+            pScore++;
         }
         else if(Cimg.value == 'lizard'){
 
@@ -96,17 +96,46 @@ const compare = () =>{
     }
     else if(Pimg.value == 'spock'){
         if((Cimg.value == 'lizard') || (Cimg.value == 'paper')){
-            cScore += 1
+            cScore++;
         }
         else if((Cimg.value == 'rock') || (Cimg.value == 'scissors')){
-            pScore += 1
+            pScore++;
         }
         else if(Cimg.value == 'spock'){
 
         }
     }
     PscoreSpan.textContent = pScore
-    CscoreSpan.textContent = cScore   
+    CscoreSpan.textContent = cScore
+    
+    if(pScore == 10){
+        alert("Vous avez gagné !")
+    }
+    else if(cScore == 10){
+        alert("Vous avez perdu !")
+    }
 }
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+
 
 

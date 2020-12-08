@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lightbox.min.css">
     <script src="script.js" defer></script>
+    <script src="lightbox-plus-jquery.min.js" defer></script>
     <title>Pierre, Papier, Ciseaux, Lézard, Spock</title>
 </head>
 <body>
     <div class="container">
         <div class="logo">
             <img src="images/logo.png" alt="logo">
-            <h1 class="rules">Règles</h1>
+            <a href="images/rules.png" data-lightbox="Rules" data-tilte=""><h1 class="rules">Règles</h1></a>
         </div>
         <div class="scores">
             <p>JOUEUR - <span class="Pscore"></span></p>
@@ -31,6 +33,7 @@
         <footer>
         <h3><a href="https://github.com/kevinjouret" alt="MyGithub" title="Voir mon Github">/// Kevin Jouret - 2020 ///</a></h3>    
         </footer>
+        <script src="lightbox.js"></script>
     </div>
 </body>
 </html>
